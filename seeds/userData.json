@@ -1,0 +1,27 @@
+[
+    {
+      "email": "bob@bob.com",
+      "username": "bob_is_cool",
+      "password": "bob123"
+    },
+    {
+      "email": "penny@penelope.com",
+      "username": "pusha_p",
+      "password": "penny123"
+    },
+    {        
+      "email": "john@doe.com",
+      "username": "johndont",
+      "password": "john123"
+    },
+    {
+      "email": "jane@doe.com",
+      "username": "jane.loves.tarzan",
+      "password": "jane123"
+      },
+    {
+      "email": "frank@frankfurt.net",
+      "username": "frickityfrank",
+      "password": "frank123"
+    }
+]
