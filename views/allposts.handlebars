@@ -1,0 +1,24 @@
+<!-- Loop over each object in the projects array -->
+<h3 class="recents-all">all posts</h3>
+{{#each posts as |post|}}
+<div class="recent-posts">
+  <div class="homepage-posts">
+    <h2 class="qs-and-as">subject:</h2>
+    <p class="title">{{post.title}}</p>
+    <h2 class="qs-and-as">description:</h2>
+    <p class="homepage-posts-descriptions">{{post.description}}</p>
+    <p class="homepage-posts-users"><i>posted by: </i> {{post.user.username}}</p>
+    <h4>comments:</h4>
+    {{#each post.comment}}
+    <p>{{comment}}</p>
+    {{/each}}
+    {{log post}}
+    <div id="addCommentDiv">
+    <textarea class="comment-input" type="text" id="commentInp{{post.id}}"></textarea>
+    <br/>
+    <button data-id={{post.id}} id="addComment{{post.id}}" class="commentBtn" >add a comment</button>
+    </div>
+  </div>
+</div>
+{{/each}}
+<script src="./js/giveComment.js"></script>

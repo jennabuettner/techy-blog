@@ -1,0 +1,74 @@
+<!-- Loop over each object in the projects array -->
+{{#if logged_in}}
+<div class="new-post-container">
+  <div class="home-card">
+      <h3 class="card-header">create new post</h3>
+      <form class="card-body new-post-form" id="new-post-form">
+          <label for="post-title" class="form-label">title: </label>
+          <br/>
+          <input type="text" id="titleInp" name="post-title" class="form-input"></input>
+          <br/>
+          <label class="form-label" for="content">description: </label>
+          <br/>
+          <textarea name="content" class="form-input" id="descInp"></textarea>
+          <br/>
+        <button type="submit" class="btn" id="postBtn">POST</button>
+      </form>
+  </div>
+</div>
+
+<div class="recents-header">
+  <h3 class="recents">recent posts</h3>
+</div>
+{{else}}
+<div class="row-home">
+  <div class="login-form-container">
+    <h2>login/h2>
+
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <br/>
+        <input class="form-input" type="text" id="email-login"></input>
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <br/>
+        <input class="form-input" type="password" id="password-login"></input>
+      </div>
+      <div class="buttons">
+        <div class="form-group">
+          <button class="btn-login" type="submit">login</button>
+        </div>
+        <div class="form-group">
+          <button class="btn-signup" type="submit"><a href="/signUp">sign up</a></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="recents-header">
+  <h3 class="recents">recent posts</h3>
+</div>
+{{/if}}
+
+{{#each posts as |post|}}
+<div class="recent-posts">
+  <div class="homepage-posts">
+    <h2 class="qs-and-as">title:</h2>
+    <p class="title">{{post.title}}</p>
+    <h2 class="qs-and-as">description:</h2>
+    <p class="homepage-posts-descriptions">{{post.description}}</p>
+    <p class="homepage-posts-users"><i>posted by:</i> {{post.user.username}}</p>
+      <h4 class="qs-and-as">comments:</h4>
+    {{#each post.comment}}
+    <p>{{advice}}</p>
+    {{/each}}
+  </div>
+</div>
+{{/each}}
+{{#if logged_in}}
+<script src="./js/post.js"></script>
+{{else}}
+{{/if}}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>techytalk</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  <div class="page-container">
+    <div class="content-wrap">
+      <header class="navbar">
+        <h1 class="homepage-header">
+          <a href="/">techytalk</a>
+        </h1>
+        <nav class="nav-items">
+          <!-- Conditionally render login or logout links -->
+          <a href="/">Home</a>
+
+
+
+
+          {{#if logged_in}}
+          <a href="/posts">Dashboard</a>
+
+          <button class="logout-button" id="logout">Logout</button>
+          
+          
+          
+          
+          
+          {{else}}
+          <a href="/login">Dashboard</a>
+          <a href="/signUp">Login</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main>
+
+        {{{ body }}}
+      </main>
+
+
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{else}}
+        <script src="./js/login.js"></script>
+      {{/if}}
+    </div>
+    <footer><h4>created by jennabee ♥</h4></footer>
+  </div>
+</body>
+
+</html>
