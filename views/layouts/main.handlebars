@@ -2,12 +2,15 @@
 <head lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>techytalk</title>
-  <link rel="stylesheet" href="./css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>techytalk</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="page-container">
     <div class="content-wrap">
@@ -17,23 +20,16 @@
         </h1>
         <nav class="nav-items">
           <!-- Conditionally render login or logout links -->
-          <a href="/">Home</a>
-
-
-
+          <a href="/">home</a>
 
           {{#if logged_in}}
-          <a href="/posts">Dashboard</a>
+          <a href="/allposts">dashboard</a>
 
-          <button class="logout-button" id="logout">Logout</button>
-          
-          
-          
-          
+          <button class="logout-button" id="logout">logout</button>
           
           {{else}}
-          <a href="/login">Dashboard</a>
-          <a href="/signUp">Login</a>
+          <a href="/">dashboard</a>
+          <a href="/login">login</a>
           {{/if}}
         </nav>
       </header>
@@ -41,7 +37,6 @@
 
         {{{ body }}}
       </main>
-
 
       {{#if logged_in}}
       <script src="/js/logout.js"></script>

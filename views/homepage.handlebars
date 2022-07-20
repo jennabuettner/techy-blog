@@ -8,11 +8,11 @@
           <br/>
           <input type="text" id="titleInp" name="post-title" class="form-input"></input>
           <br/>
-          <label class="form-label" for="content">description: </label>
+          <label class="form-label" for="content">body: </label>
           <br/>
           <textarea name="content" class="form-input" id="descInp"></textarea>
           <br/>
-        <button type="submit" class="btn" id="postBtn">POST</button>
+        <button type="submit" class="btn" id="postBtn">post</button>
       </form>
   </div>
 </div>
@@ -27,7 +27,7 @@
 
     <form class="form login-form">
       <div class="form-group">
-        <label for="email-login">email:</label>
+        <label for="username-login">username:</label>
         <br/>
         <input class="form-input" type="text" id="email-login"></input>
       </div>
@@ -36,14 +36,14 @@
         <br/>
         <input class="form-input" type="password" id="password-login"></input>
       </div>
-      <div class="buttons">
+
         <div class="form-group">
-          <button class="btn-login" type="submit">login</button>
+          <button class="btn-login" type="submit"><a href="/profile">login</a></button>
         </div>
         <div class="form-group">
           <button class="btn-signup" type="submit"><a href="/signUp">sign up</a></button>
         </div>
-      </div>
+
     </form>
   </div>
 </div>
@@ -58,8 +58,8 @@
   <div class="homepage-posts">
     <h2 class="qs-and-as">title:</h2>
     <p class="title">{{post.title}}</p>
-    <h2 class="qs-and-as">description:</h2>
-    <p class="homepage-posts-descriptions">{{post.description}}</p>
+    <h2 class="qs-and-as">body:</h2>
+    <p class="homepage-posts-descriptions">{{post.body}}</p>
     <p class="homepage-posts-users"><i>posted by:</i> {{post.user.username}}</p>
       <h4 class="qs-and-as">comments:</h4>
     {{#each post.comment}}

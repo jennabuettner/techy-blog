@@ -1,12 +1,12 @@
 <!-- Loop over each object in the projects array -->
-<h3 class="recents-all">all posts</h3>
+<h3 class="recents-all">dashboard</h3>
 {{#each posts as |post|}}
 <div class="recent-posts">
   <div class="homepage-posts">
     <h2 class="qs-and-as">subject:</h2>
     <p class="title">{{post.title}}</p>
-    <h2 class="qs-and-as">description:</h2>
-    <p class="homepage-posts-descriptions">{{post.description}}</p>
+    <h2 class="qs-and-as">body:</h2>
+    <p class="homepage-posts-descriptions">{{post.body}}</p>
     <p class="homepage-posts-users"><i>posted by: </i> {{post.user.username}}</p>
     <h4>comments:</h4>
     {{#each post.comment}}
@@ -21,4 +21,4 @@
   </div>
 </div>
 {{/each}}
-<script src="./js/giveComment.js"></script>
+<script src="./js/comment.js"></script>
